@@ -31,7 +31,7 @@ function MainNavigation() {
             <Link href='/'>All Movies</Link> ({globalCtx.theGlobalObject.meetings.length})
           </li>
           <li>
-            <Link href='/new-meetup'>Add New Movie</Link>
+            <Link href='/new-movie'>Add New Movie</Link>
           </li>
         </ul>
       </nav>

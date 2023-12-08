@@ -1,7 +1,7 @@
-// /api/new-meetup
+// /api/new-movie
 
 async function handler(req, res) { // can be called anything you like
-  const response = await fetch('http://localhost:8000/readMeeting', {
+  const response = await fetch('http://localhost:8000/readMovie', {
     method: 'POST',
     body: JSON.stringify({ cmd: 'all' }),
     headers: {

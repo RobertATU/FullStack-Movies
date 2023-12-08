@@ -1,8 +1,8 @@
 import Card from '../ui/Card';
-import classes from './MeetupItem.module.css';
+import classes from './MovieItem.module.css';
 import { useRouter } from 'next/router';
 
-function MeetupItem(props) {
+function MovieItem(props) {
   const router = useRouter();
 
   function showDetailsHandler() {
@@ -29,4 +29,4 @@ console.log(props)
   );
 }
 
-export default MeetupItem;
+export default MovieItem;

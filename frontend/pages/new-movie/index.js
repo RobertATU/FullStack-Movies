@@ -1,7 +1,7 @@
-// our-dimain.com/new-meetup
-import NewMeetupForm from '../../components/meetups/NewMeetupForm'
+// our-dimain.com/new-movie
+import NewMovieForm from '../../components/movies/NewMovieForm'
 import { useRouter } from 'next/router';
-import GlobalContext from "../../pages/store/globalContext"
+import GlobalContext from "../store/globalContext"
 import { useContext } from 'react'
 
 function NewMeetupPage() {
@@ -13,7 +13,7 @@ function NewMeetupPage() {
         router.push('/');
     }
 
-    return <NewMeetupForm onAddMeetup={addMeetupHandler} />
+    return <NewMovieForm onAddMeetup={addMeetupHandler} />
 }
 
 export default NewMeetupPage

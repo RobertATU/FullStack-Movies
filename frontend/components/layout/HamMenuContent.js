@@ -37,7 +37,7 @@ export default function HamMenuContent(props) {
       <>
         <div className={classes.button}>
           <li>
-            <Link href="/new-meetup">Add New Movie</Link>
+            <Link href="/new-movie">Add New Movie</Link>
           </li>
         </div>
         <div className={classes.button}>

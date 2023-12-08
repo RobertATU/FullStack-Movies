@@ -16,7 +16,7 @@ export function GlobalContextProvider(props) {
     }, []);
 
     async function getAllMeetings() {
-        const response = await fetch('/api/get-meetings', {
+        const response = await fetch('/api/get-movies', {
             method: 'POST',
             body: JSON.stringify({ meetups: 'all' }),
             headers: {
@@ -24,6 +24,7 @@ export function GlobalContextProvider(props) {
             }
         });
         let data = await response.json();
+        console.log(data);
         setGlobals((previousGlobals) => { const newGlobals = JSON.parse(JSON.stringify(previousGlobals)); newGlobals.meetings = data.meetings; newGlobals.dataLoaded = true; return newGlobals })
     }
 
@@ -38,7 +39,7 @@ export function GlobalContextProvider(props) {
             })
         }
         if (command.cmd == 'addMeeting') {
-            const response = await fetch('/api/new-meetup', {
+            const response = await fetch('/api/new-movie', {
                 method: 'POST',
                 body: JSON.stringify(command.newVal),
                 headers: {

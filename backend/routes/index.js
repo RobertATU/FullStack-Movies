@@ -12,7 +12,9 @@ let meetingSchema = new Schema({
   title: String,
   image: String,
   director: String,
-  review: String
+  review: String,
+  long: Number,
+  lat: Number
 }, { collection: 'movies' });
 
 let meetings = oldMong.model('meetings', meetingSchema);
@@ -26,7 +28,7 @@ router.get('/', async function (req, res, next) {
 //Comment
 
 // Crud
-router.post('/createMeeting', async function (req, res, next) {
+router.post('/createMovie', async function (req, res, next) {
   let retVal = { response: "fail" }
   await meetings.create(req.body,
     function (err, res) {
@@ -40,7 +42,7 @@ router.post('/createMeeting', async function (req, res, next) {
 });
 
 // cRud   Should use GET . . . we'll fix this is Cloud next term
-router.post('/readMeeting', async function (req, res, next) {
+router.post('/readMovie', async function (req, res, next) {
   let data;
   if (req.body.cmd == 'all') {
     data = await meetings.find().lean()

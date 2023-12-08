@@ -1,7 +1,7 @@
-import MeetupItem from './MeetupItem';
-import classes from './MeetupList.module.css';
+import MeetupItem from './MovieItem';
+import classes from './MovieList.module.css';
 
-function MeetupList(props) {
+function MovieList(props) {
   return (
     <ul className={classes.list}>
       {props.meetups.map((meetup) => (
@@ -17,4 +17,4 @@ function MeetupList(props) {
   );
 }
 
-export default MeetupList;
+export default MovieList;

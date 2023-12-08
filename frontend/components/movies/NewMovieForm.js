@@ -1,13 +1,15 @@
 import { useRef } from 'react';
 
 import Card from '../ui/Card';
-import classes from './NewMeetupForm.module.css';
+import classes from './NewMovieForm.module.css';
 
-function NewMeetupForm(props) {
+function NewMovieForm(props) {
   const titleInputRef = useRef();
   const imageInputRef = useRef();
   const directorInputRef = useRef();
   const reviewInputRef = useRef();
+  const longInputRef = useRef();
+  const latInputRef = useRef();
 
   function submitHandler(event) {
     event.preventDefault();
@@ -16,13 +18,17 @@ function NewMeetupForm(props) {
     const enteredImage = imageInputRef.current.value;
     const enteredDirector = directorInputRef.current.value;
     const enteredReview = reviewInputRef.current.value;
-
+    const enteredLong = longInputRef.current.value;
+    const enteredLat = latInputRef.current.value;
+   
     const meetupData = {
       movieId: enteredTitle,
       title: enteredTitle,
       image: enteredImage,
       director: enteredDirector,
       review: enteredReview,
+      long: enteredLong,
+      lat: enteredLat
     };
 
     props.onAddMeetup(meetupData);
@@ -52,6 +58,14 @@ function NewMeetupForm(props) {
             ref={reviewInputRef}
           ></textarea>
         </div>
+        <div className={classes.control}>
+          <label htmlFor='long'>Film Location Longitute</label>
+          <input type='text' required id='long' ref={longInputRef} />
+        </div>
+        <div className={classes.control}>
+          <label htmlFor='lat'>Film Location Latitude</label>
+          <input type='text' required id='lat' ref={latInputRef} />
+        </div>
         <div className={classes.actions}>
           <button>Add Movie</button>
         </div>
@@ -60,4 +74,4 @@ function NewMeetupForm(props) {
   );
 }
 
-export default NewMeetupForm;
+export default NewMovieForm;
