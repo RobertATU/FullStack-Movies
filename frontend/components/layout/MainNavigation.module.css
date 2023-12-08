@@ -4,14 +4,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color:  #1a2920;
+  background-color:  #7c090e;
   padding: 0 10%;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .logo {
   font-size: 2rem;
-  color: white;
+  color: rgb(255, 255, 255);
   font-weight: bold;
 }
 
@@ -29,12 +29,14 @@
 
 .header a {
   text-decoration: none;
+  display: flex;
+  justify-content: flex-start;
   font-size: 1.5rem;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .header a:hover,
 .header a:active,
 .header a.active {
-  color: white;
+  color: rgb(248, 232, 4);
 }

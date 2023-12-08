@@ -16,8 +16,8 @@ console.log(props)
           <img src={props.image} alt={props.title} />
         </div>
         <div className={classes.content}>
-          <h3>{props.title}</h3>
-          <h1>{props.director}</h1>
+          <h1>{props.title}</h1>
+          <h3>{props.director}</h3>
           
           
         </div>
