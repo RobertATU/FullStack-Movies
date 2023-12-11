@@ -26,14 +26,7 @@ function MainNavigation() {
       <HamMenu toggleMenuHide={() => toggleMenuHide()} />
       <HamMenuFAB toggleMenuHide={() => toggleMenuHide()} />
       <nav>
-        <ul>
-          <li>
-            <Link href='/'>All Movies</Link> ({globalCtx.theGlobalObject.meetings.length})
-          </li>
-          <li>
-            <Link href='/new-movie'>Add New Movie</Link>
-          </li>
-        </ul>
+      
       </nav>
     </header>
   );

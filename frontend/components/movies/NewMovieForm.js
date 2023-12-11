@@ -38,7 +38,7 @@ function NewMovieForm(props) {
     <Card>
       <form className={classes.form} onSubmit={submitHandler}>
         <div className={classes.control}>
-          <label htmlFor='title'>Movie Title (must be unique: it's the meeting ID)</label>
+          <label htmlFor='title'>Movie Title </label>
           <input type='text' required id='title' ref={titleInputRef} />
         </div>
         <div className={classes.control}>

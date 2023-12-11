@@ -35,17 +35,7 @@ export default function HamMenuContent(props) {
       index //  [{title: 'Meeting 1', webAddress: '/meet1'}, {title: 'Meeting 2', webAddress: '/meet2'}]
     ) => (
       <>
-        <div className={classes.button}>
-          <li>
-            <Link href="/new-movie">Add New Movie</Link>
-          </li>
-        </div>
-        <div className={classes.button}>
-          <li>
-            <Link href="/">All Movies</Link> (
-            {globalCtx.theGlobalObject.meetings.length})
-          </li>
-        </div>
+       
         <div
           className={classes.menuItem}
           key={index}
@@ -60,7 +50,19 @@ export default function HamMenuContent(props) {
   return (
     <>
       <div className={classes.background} onClick={() => closeMe()}>
-        <div className={classes.mainContent}>{contentJsx}</div>
+        <div className={classes.mainContent}>
+        <div className={classes.button}>
+          <li>
+            <Link href="/new-movie">Add New Movie</Link>
+          </li>
+        </div>
+        <div className={classes.button}>
+          <li>
+            <Link href="/">All Movies</Link> (
+            {globalCtx.theGlobalObject.meetings.length})
+          </li>
+        </div>
+          {contentJsx}</div>
       </div>
     </>
   );
